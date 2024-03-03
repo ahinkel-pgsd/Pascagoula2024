@@ -29,8 +29,8 @@ public class CANDrivetrain extends SubsystemBase {
   public CANDrivetrain() {
     WPI_VictorSPX leftFront = new WPI_VictorSPX(kLeftFrontID);
     WPI_VictorSPX leftRear = new WPI_VictorSPX(kLeftRearID);
-      WPI_VictorSPX rightFront = new WPI_VictorSPX(kRightFrontID);
-      WPI_VictorSPX rightRear = new WPI_VictorSPX(kRightRearID);
+    WPI_VictorSPX rightFront = new WPI_VictorSPX(kRightFrontID);
+    WPI_VictorSPX rightRear = new WPI_VictorSPX(kRightRearID);
 
       // Set the rear motors to follow the front motors.
       leftRear.follow(leftFront);
@@ -43,7 +43,7 @@ public class CANDrivetrain extends SubsystemBase {
       // Put the front motors into the differential drive object. This will control all 4 motors with
       // the rears set to follow the fronts
       m_drivetrain = new DifferentialDrive(leftFront, rightFront);
-    }
+  }
   
 
   /*Method to control the drivetrain using arcade drive. Arcade drive takes a speed in the X (forward/back) direction
